@@ -1,0 +1,288 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.conceptcore.newlifemedicines.Fragments.AddAddressFragment">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.21" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.952959" />
+
+    <EditText
+        android:id="@+id/txtFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/guideline19" />
+
+    <View
+        android:id="@+id/devider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/txtFullName"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+
+    <EditText
+        android:id="@+id/txtMobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Mobile No."
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/devider2" />
+
+    <View
+        android:id="@+id/devider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/txtMobile"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+
+    <EditText
+        android:id="@+id/txtPin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Pin Code"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/devider3" />
+
+    <View
+        android:id="@+id/devider4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/txtPin"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/txtAddLine1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Address Line 1"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/devider4" />
+
+    <View
+        android:id="@+id/devider5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddLine1"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/txtAddLine2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="Address Line 2"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/devider5" />
+
+    <View
+        android:id="@+id/devider6"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddLine2"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/txtCity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="City/Town"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/devider6" />
+
+    <View
+        android:id="@+id/devider7"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/txtCity"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <EditText
+        android:id="@+id/txtState"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="State"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/devider7" />
+
+    <View
+        android:id="@+id/devider8"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toBottomOf="@+id/txtState"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/add_qty_back"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toTopOf="@+id/guideline21" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+
+</android.support.constraint.ConstraintLayout>

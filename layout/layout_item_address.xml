@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mehank Doshi"
+            android:textSize="@dimen/add_name_size"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/txtAdd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B-705, Happy Palace"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtAdd2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Varachha"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtCityStatePin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Surat Gujarat - 395006"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8866969594"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:textColor="@color/white"
+            android:background="@drawable/add_btn_back"/>
+    </LinearLayout>
+
+</LinearLayout>

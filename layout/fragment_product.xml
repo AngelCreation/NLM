@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.conceptcore.newlifemedicines.Fragments.ProductFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llSortBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtSortBy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Sort By"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/llFilter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Filter"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/errorViewProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:scaleType="centerInside"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txtErrorProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="No Products Found"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dataViewProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvProducts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            <!--<EditText android:id="@+id/inputSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search products.."
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:background="@drawable/add_qty_back"
+                android:inputType="textPersonName"/>-->
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.conceptcore.newlifemedicines.CheckOut">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarCheckOut"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:theme="@style/BaseTheme"
+        app:navigationIcon="@drawable/ic_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/toolbar_text_size"
+                android:layout_marginStart="@dimen/toolbar_mrg_start"
+                android:text="Place Your Order"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/toolbarCheckOut"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/devider">
+
+        <LinearLayout
+            android:id="@+id/llWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/gray"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Wallet Balance: "
+                android:textSize="@dimen/wallet_text_size"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Rs"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Payment Type: "
+                android:textColor="@color/black"
+                />
+
+            <RadioGroup
+                android:id="@+id/rgroupPayType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rbtnCod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="COD"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnCreditCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Credit Card"/>
+
+                <RadioButton
+                    android:id="@+id/rbtnPaym"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paytm"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <CheckBox
+                android:id="@+id/ckUseWallet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Use Wallet"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Amount To Pay: "
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/Rs"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCheckOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/mrg_btn_start_end"
+            android:layout_marginEnd="@dimen/mrg_btn_start_end"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/add_qty_back"
+            android:text="Place Order"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

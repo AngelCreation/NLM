@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.conceptcore.newlifemedicines.ShoppingCart">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:theme="@style/BaseTheme"
+        app:navigationIcon="@drawable/ic_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/toolbar_text_size"
+                android:layout_marginStart="@dimen/toolbar_mrg_start"
+                android:text="Items in your bag"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/toolbar"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/devider"
+        android:layout_above="@+id/txtSelectAddress">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Deliver To:"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/add_text_size"/>
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/add_name_size"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtAdd1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/txtAdd2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/txtCityStatePin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/txtMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/txtChangeAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:text="Change"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/errorViewCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:scaleType="centerInside"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txtErrorCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="100dp"
+                    android:text="No items in cart"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dataViewCart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Grand Total"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rs. 255"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtSelectAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/add_text_size"
+        android:gravity="center"
+        android:padding="@dimen/padding_add_view"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        />
+
+</RelativeLayout>

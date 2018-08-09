@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.conceptcore.newlifemedicines.UploadPrescription"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarUploadPres"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:theme="@style/BaseTheme"
+        app:navigationIcon="@drawable/ic_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/toolbar_text_size"
+                android:layout_marginStart="@dimen/toolbar_mrg_start"
+                android:text="Upload Prescription"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <View
+        android:id="@+id/devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_below="@+id/toolbarUploadPres"
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/devider">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="@string/text_upload_photo_hint"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+        <Button
+            android:id="@+id/btnFromGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mrg_btn_start_end"
+            android:layout_marginRight="@dimen/mrg_btn_start_end"
+            android:drawableStart="@drawable/ic_gallery"
+            android:text="Choose from Gallery"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mrg_btn_start_end"
+            android:layout_marginRight="@dimen/mrg_btn_start_end"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_camera"
+            android:text="Take Photo"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_margin="10dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/mrg_btn_start_end"
+            android:layout_marginRight="@dimen/mrg_btn_start_end"
+            android:layout_marginTop="@dimen/mrg_start_end"
+            android:layout_marginBottom="@dimen/mrg_start_end"
+            android:background="@color/colorPrimary"/>
+
+        <EditText
+            android:id="@+id/etxtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mrg_start_end"
+            android:layout_marginRight="@dimen/mrg_start_end"
+            android:background="@android:color/transparent"
+            android:hint="Title"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/mrg_start_end"
+            android:layout_marginRight="@dimen/mrg_start_end"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"/>
+
+
+        <EditText
+            android:id="@+id/etxtComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mrg_start_end"
+            android:layout_marginRight="@dimen/mrg_start_end"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:hint="Additional Comments"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/mrg_start_end"
+            android:layout_marginRight="@dimen/mrg_start_end"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"/>
+
+        <Button
+            android:id="@+id/btnUploadPrescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/mrg_btn_start_end"
+            android:layout_marginEnd="@dimen/mrg_btn_start_end"
+            android:layout_marginTop="@dimen/mrg_start_end"
+            android:background="@drawable/add_qty_back"
+            android:text="Upload Prescription"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

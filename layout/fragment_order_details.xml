@@ -1,0 +1,250 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.conceptcore.newlifemedicines.Fragments.OrderDetailsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Delivered To:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/add_text_size"/>
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mehank Doshi"
+                    android:textSize="@dimen/add_name_size"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/txtAdd1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B-705, Happy Palace"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtAdd2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Varachha"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/txtCityStatePin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surat Gujarat - 395006"
+                    android:textColor="@color/black"/>
+
+                <!--<TextView
+                    android:id="@+id/txtMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8866969594"
+                    android:textColor="@color/black"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Product Name"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Quntity"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Price(\u20B9)"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/dataViewHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prescription Details: "
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/add_text_size"
+                    />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/imgPres"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Title: "
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/add_text_size"/>
+
+                                <TextView
+                                    android:id="@+id/txtPresTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llPresComments"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Comments: "
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize="@dimen/add_text_size"/>
+
+                                <TextView
+                                    android:id="@+id/txtPresComments"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"/>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="10dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/llTotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="Grand Total"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:layout_marginTop="10dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

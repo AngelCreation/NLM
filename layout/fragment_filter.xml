@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_margin="10dp"/>
+
+            <RelativeLayout
+                android:id="@+id/rvFilterPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:layout_below="@+id/txtPrice">
+
+                <RelativeLayout
+                    android:id="@+id/rvPC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Min"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Max"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                    android:id="@+id/rangeSeekbar2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rvPC"
+                    android:layout_marginTop="20dp"
+                    app:corner_radius="5"
+                    app:min_value="0"
+                    app:max_value="1000"
+                    app:steps="10"
+                    app:bar_color="@color/colorAccent"
+                    app:bar_highlight_color="@color/colorPrimary"
+                    app:left_thumb_color="@color/colorPrimary"
+                    app:right_thumb_color="@color/colorPrimary"
+                    app:left_thumb_color_pressed="@color/colorPrimaryDark"
+                    app:right_thumb_color_pressed="@color/colorPrimaryDark"
+                    app:data_type="_integer"/>
+
+                <TextView
+                    android:id="@+id/textMin2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_below="@id/rangeSeekbar2"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:id="@+id/textMax2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_below="@id/rangeSeekbar2"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!--<TextView-->
+            <!--android:id="@+id/txtCmpName"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Company Name"-->
+            <!--android:layout_below="@+id/rvFilterPrice"-->
+            <!--android:textColor="@color/colorPrimary"-->
+            <!--android:textStyle="bold"-->
+            <!--android:textSize="20sp"-->
+            <!--android:layout_margin="10dp"/>-->
+
+            <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_below="@+id/rvFilterPrice">-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/rvFilterPrice">
+
+                <android.support.v7.widget.SearchView
+                    android:id="@+id/txtSearchCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:defaultQueryHint="Search Comapanies.."
+                    android:layout_margin="5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorPrimary"
+                    android:background="@drawable/add_qty_back"
+                    ></android.support.v7.widget.SearchView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rvCmpNames"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--</ScrollView>-->
+
+
+        <TextView
+            android:id="@+id/txtApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/add_text_size"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Apply"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llOrder"
+    android:background="@drawable/cashback_back"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtOrderNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order No 1245874"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/toolbar_text_size"/>
+
+        <TextView
+            android:id="@+id/txtDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5th June 18"
+            android:textSize="@dimen/button_text_size"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: "
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/Rs"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>
